@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            backend:
+              - uri: http://localhost:8082
+                instance-id: ins2
+              - uri: http://localhost:8083
+                instance-id: ins3
+    gateway:
+      routes:
+        - id: backend
+          uri: lb://backend
+          predicates:
+            - Path=/**
+    loadbalancer:
+      configurations: request-based-sticky-session
+      sticky-session:
+        add-service-instance-cookie: true

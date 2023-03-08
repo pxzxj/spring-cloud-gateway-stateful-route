@@ -1,0 +1,6 @@
+*.iml
+/.idea
+/target
+# Project exclude paths
+/backend/target/
+/gateway/target/

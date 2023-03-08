@@ -1,0 +1,3 @@
+= spring-cloud-gateway-stateful-route
+
+参考 https://pxzxj.github.io/articles/spring-cloud-gateway-stateful-route.html[Spring Cloud Gateway有状态路由]
